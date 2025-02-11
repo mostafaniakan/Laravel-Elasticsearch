@@ -185,7 +185,7 @@ class ElasticController extends Controller
 //        return response()->json(['message' => 'Data synchronized with Elasticsearch']);
 //
 //    }
-    public function syncData(Request $request)
+    public function syncData()
     {
         $data = User::all();
         $client = ClientBuilder::create()
