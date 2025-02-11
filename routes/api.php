@@ -10,3 +10,5 @@ Route::post('create',[ElasticController::class,'store']);
 Route::get('sync-data',[ElasticController::class,'syncData']);
 
 Route::get('/config', [ElasticController::class,'config']);
+Route::get('/apiKey', [ElasticController::class,'createApiKey']);
+Route::post('/create-kibana-user', [ElasticController::class, 'createServiceToken']);

@@ -15,6 +15,12 @@ command: sudo xattr -r -d com.apple.quarantine jdk.app
 
 ./bin/elasticsearch
 
+- Roune Kibana
+ ./bin/kibana
+
+
+- Create New Token:
+sudo bin/elasticsearch-create-enrollment-token --scope node
 
 ✅ Elasticsearch security features have been automatically configured!
 ✅ Authentication is enabled and cluster connections are encrypted.
