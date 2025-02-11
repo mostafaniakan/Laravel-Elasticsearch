@@ -145,8 +145,7 @@ class ElasticController extends Controller
 //            'wildcard' => [
 //        'name' => 'j*'
 //    ]
-
-
+            
             ]
         ];
 
