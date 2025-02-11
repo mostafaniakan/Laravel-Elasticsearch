@@ -114,14 +114,18 @@ class ElasticController extends Controller
             ->setSSLVerification(false)
             ->build();
 
+
         $params = [
             'index' => 'users',
             'body' => [
                 'query' => [
-                    'wildcard' => [
-                        'name' => '*' . $query . '*'
+                    "query_string" => [
+                        "default_field" => "name",
+                        "query" => '"' . $query . '"'
                     ]
                 ]
+
+
 //                'query' => [
 //        'match' => [
 //            'name' => $query
@@ -145,7 +149,7 @@ class ElasticController extends Controller
 //            'wildcard' => [
 //        'name' => 'j*'
 //    ]
-            
+
             ]
         ];
 
